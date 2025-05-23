@@ -127,7 +127,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            The generation of safety-critical scenarios in simulation has become increasingly crucial for safety evaluation in autonomous vehicles (AV) prior to road deployment. However, current approaches largely rely on predefined threat patterns or rule-based strategies, which limit their ability to expose diverse and unforeseen failure modes. To overcome these, we propose ScenGE, a framework that exposes AV safety vulnerabilities by combining adversarial threat generation and collaborative trajectory evolution. Given a simple prompt of a benign scene, it first performs Meta-Scenario Generation, where a large language model (LLM), grounded in structured driving knowledge (e.g., traffic regulations, real-world accident records), infers an adversarial agent whose behavior poses a threat to the ego vehicle. This agent is embedded into a meta-scenario specified in executable simulation code, supporting precise control over scene composition and agent dynamics. Subsequently, Complex Scenario Evolution augments the Meta-Scenario by introducing background vehicles with collaborative risky trajectories. It constructs an adversarial collaborator graph to identify key agents whose trajectories will be perturbed temporally and spatially, which will induce coordinated deviations in agent behavior and increase the likelihood of collision by intensifying interaction complexity. Extensive experiments conducted on multiple reinforcement learning (RL) based AV models show that ScenGE uncovers more severe collision cases (+31.96%) on average than SoTA baselines. Additionally, we validate the efficacy of ScenGE on large model based; we further observe that adversarial training on our scenarios improves the robustness of RL-based models under safety-critical conditions. Our ScenGE can generate hundreds of adversarial variants per scene, covering diverse agent interactions and failure modes, facilitating the safety evaluation of AD systems. Our codes can be found at <a href="https://anonymous.4open.science/r/ADvScene-0A007F8BK" style="color: #3873DC;" target="_blank">https://scenge.github.io</a>.
+            The generation of safety-critical scenarios in simulation has become increasingly crucial for safety evaluation in autonomous vehicles (AV) prior to road deployment. However, current approaches largely rely on predefined threat patterns or rule-based strategies, which limit their ability to expose diverse and unforeseen failure modes. To overcome these, we propose ScenGE, a framework that exposes AV safety vulnerabilities by combining adversarial threat generation and collaborative trajectory evolution. Given a simple prompt of a benign scene, it first performs Meta-Scenario Generation, where a large language model (LLM), grounded in structured driving knowledge (e.g., traffic regulations, real-world accident records), infers an adversarial agent whose behavior poses a threat to the ego vehicle. This agent is embedded into a meta-scenario specified in executable simulation code, supporting precise control over scene composition and agent dynamics. Subsequently, Complex Scenario Evolution augments the Meta-Scenario by introducing background vehicles with collaborative risky trajectories. It constructs an adversarial collaborator graph to identify key agents whose trajectories will be perturbed temporally and spatially, which will induce coordinated deviations in agent behavior and increase the likelihood of collision by intensifying interaction complexity. Extensive experiments conducted on multiple reinforcement learning (RL) based AV models show that ScenGE uncovers more severe collision cases (+31.96%) on average than SoTA baselines. Additionally, we validate the efficacy of ScenGE on large model based; we further observe that adversarial training on our scenarios improves the robustness of RL-based models under safety-critical conditions. Our ScenGE can generate hundreds of adversarial variants per scene, covering diverse agent interactions and failure modes, facilitating the safety evaluation of AD systems. Our codes can be found at <a href="https://scenge.github.io" style="color: #3873DC;" target="_blank">https://scenge.github.io</a>.
           </p>
         </div>
       </div>
@@ -155,6 +155,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3 has-text-centered">Visual Illustration of Safety-Critical Scenarios</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item has-text-centered">
         <!-- Your image here -->
@@ -226,27 +227,21 @@
 </section>
 <!-- End image carousel -->
 
-
-
-
 <!-- Youtube video -->
-<!--<section class="hero is-small is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
-<!--      <h2 class="title is-3">Video Presentation</h2>-->
-<!--      <div class="columns is-centered has-text-centered">-->
-<!--        <div class="column is-four-fifths">-->
-<!--          -->
-<!--          <div class="publication-video">-->
-<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
-<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Title 1</h2>
+      <div class="hero-body">
+        <img src="static/images/vis_00.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Representative frames from a case scenario generated by ScenGE.<br/>
+            Some Descriptions...
+          </h2>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- End youtube video -->
 
 

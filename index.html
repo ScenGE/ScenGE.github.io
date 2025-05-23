@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">ScenGE: Adversarial Scenario Generation and Evolution for Autonomous Driving</h1>
+            <h1 class="title is-1 publication-title">ScenGE: Adversarial Generation and Collaborative Evolution of Safety-Critical Scenarios for Autonomous Vehicles</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -67,7 +67,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="static/pdfs/NeurIPS_2025_ScenGE.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -78,7 +78,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="static/pdfs/supp.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -110,17 +110,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-<!--      <video poster="" id="tree" autoplay controls muted loop height="100%">-->
-<!--        &lt;!&ndash; Your video here &ndash;&gt;-->
-<!--        <source src="static/videos/banner_video.mp4"-->
-<!--        type="video/mp4">-->
-<!--      </video>-->
-      <h2 class="subtitle has-text-centered">
-        Picture and Project Introduction.
-      </h2>
+      <img src="static/images/framework.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Our methods ....
+        </h2>
     </div>
   </div>
-</section>
+
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -131,7 +127,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            The generation of safety-critical adversarial scenarios in the simulation environment has become increasingly crucial for efficiently testing autonomous driving (AD) vehicles prior to road deployment. However, current approaches largely rely on predefined threat patterns or rule-based strategies, which limit their ability to expose diverse and unforeseen failure modes. To overcome these limitations, we introduce ADvScene, a novel framework for the automated generation and evolution of safety-critical adversarial scenarios aimed at revealing latent safety vulnerabilities in AD systems. Given a simple user prompt describing a benign driving scene, ADvScene first performs Meta-Scenario Generation, in which a large language model (LLM) is prompted to generate a richly detailed meta-scenario represented by the executable simulation programming language. This process is grounded in violations of established driving safety knowledge priors (e.g., traffic regulations, driver licensing criteria, and real-world accident records), ensuring that generated scenarios are both challenging and realistic. Building on this, we propose Complex Scenario Evolution, which constructs an adversarial collaboration graph to capture and identify key agents within the complex traffic environment. The trajectory segments of these agents are then subtly perturbed to maximize adversarial impact while preserving plausibility and coherence within the traffic flow. Extensive experiments conducted on multiple reinforcement learning-based and LLM-based AV models show that ADvScene uncovers more severe collision cases and achieve a +31.96% collision rate than state-of-the-art baselines. In addition, adversarial training on the generated cases could improve model robustness on safety-critical adversarial scenarios. Our codes can be found at <a href="https://anonymous.4open.science/r/ADvScene-0A007F8BK" style="color: #3873DC;" target="_blank">here</a>.
+            The generation of safety-critical scenarios in simulation has become increasingly crucial for safety evaluation in autonomous vehicles (AV) prior to road deployment. However, current approaches largely rely on predefined threat patterns or rule-based strategies, which limit their ability to expose diverse and unforeseen failure modes. To overcome these, we propose ScenGE, a framework that exposes AV safety vulnerabilities by combining adversarial threat generation and collaborative trajectory evolution. Given a simple prompt of a benign scene, it first performs Meta-Scenario Generation, where a large language model (LLM), grounded in structured driving knowledge (e.g., traffic regulations, real-world accident records), infers an adversarial agent whose behavior poses a threat to the ego vehicle. This agent is embedded into a meta-scenario specified in executable simulation code, supporting precise control over scene composition and agent dynamics. Subsequently, Complex Scenario Evolution augments the Meta-Scenario by introducing background vehicles with collaborative risky trajectories. It constructs an adversarial collaborator graph to identify key agents whose trajectories will be perturbed temporally and spatially, which will induce coordinated deviations in agent behavior and increase the likelihood of collision by intensifying interaction complexity. Extensive experiments conducted on multiple reinforcement learning (RL) based AV models show that ScenGE uncovers more severe collision cases (+31.96%) on average than SoTA baselines. Additionally, we validate the efficacy of ScenGE on large model based; we further observe that adversarial training on our scenarios improves the robustness of RL-based models under safety-critical conditions. Our ScenGE can generate hundreds of adversarial variants per scene, covering diverse agent interactions and failure modes, facilitating the safety evaluation of AD systems. Our codes can be found at <a href="https://anonymous.4open.science/r/ADvScene-0A007F8BK" style="color: #3873DC;" target="_blank">https://scenge.github.io</a>.
           </p>
         </div>
       </div>
@@ -140,44 +136,94 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--       <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--          First image description.-->
-<!--        </h2>-->
+<!--<section class="section hero-body">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-four-fifths">-->
+<!--        <h2 class="title is-3">Abstract</h2>-->
+<!--        <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            The generation of safety-critical scenarios in simulation has become increasingly crucial for safety evaluation in autonomous vehicles (AV) prior to road deployment. However, current approaches largely rely on predefined threat patterns or rule-based strategies, which limit their ability to expose diverse and unforeseen failure modes. To overcome these, we propose ScenGE, a framework that exposes AV safety vulnerabilities by combining adversarial threat generation and collaborative trajectory evolution. Given a simple prompt of a benign scene, it first performs Meta-Scenario Generation, where a large language model (LLM), grounded in structured driving knowledge (e.g., traffic regulations, real-world accident records), infers an adversarial agent whose behavior poses a threat to the ego vehicle. This agent is embedded into a meta-scenario specified in executable simulation code, supporting precise control over scene composition and agent dynamics. Subsequently, Complex Scenario Evolution augments the Meta-Scenario by introducing background vehicles with collaborative risky trajectories. It constructs an adversarial collaborator graph to identify key agents whose trajectories will be perturbed temporally and spatially, which will induce coordinated deviations in agent behavior and increase the likelihood of collision by intensifying interaction complexity. Extensive experiments conducted on multiple reinforcement learning (RL) based AV models show that ScenGE uncovers more severe collision cases (+31.96%) on average than SoTA baselines. Additionally, we validate the efficacy of ScenGE on large model based; we further observe that adversarial training on our scenarios improves the robustness of RL-based models under safety-critical conditions. Our ScenGE can generate hundreds of adversarial variants per scene, covering diverse agent interactions and failure modes, facilitating the safety evaluation of AD systems. Our codes can be found at <a href="https://anonymous.4open.science/r/ADvScene-0A007F8BK" style="color: #3873DC;" target="_blank">https://scenge.github.io</a>.-->
+<!--          </p>-->
+<!--        </div>-->
 <!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--          Second image description.-->
-<!--        </h2>-->
-<!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--         Third image description.-->
-<!--       </h2>-->
-<!--     </div>-->
-<!--     <div class="item">-->
-<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>-->
-<!--      <h2 class="subtitle has-text-centered">-->
-<!--        Fourth image description.-->
-<!--      </h2>-->
 <!--    </div>-->
 <!--  </div>-->
-<!--</div>-->
-<!--</div>-->
 <!--</section>-->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item has-text-centered">
+        <!-- Your image here -->
+        <img src="static/images/1_00.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          <strong>Base Scenario 1:</strong> Straight Obstacle.<br/>
+          Some Descriptions.
+        </h2>
+      </div>
+      <div class="item has-text-centered">
+        <!-- Your image here -->
+        <img src="static/images/2_00.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          <strong>Base Scenario 2:</strong> Turning Obstacle.<br/>
+          Some Descriptions.
+        </h2>
+      </div>
+      <div class="item has-text-centered">
+        <!-- Your image here -->
+        <img src="static/images/3_00.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          <strong>Base Scenario 3:</strong> Lane Changing.<br/>
+          Some Descriptions.
+       </h2>
+     </div>
+     <div class="item has-text-centered">
+      <!-- Your image here -->
+      <img src="static/images/4_00.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          <strong>Base Scenario 4:</strong> Vehicle Passing.<br/>
+          Some Descriptions.
+      </h2>
+    </div>
+        <div class="item has-text-centered">
+        <!-- Your image here -->
+        <img src="static/images/5_00.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          <strong>Base Scenario 5:</strong> Red-light Running.<br/>
+          Some Descriptions.
+        </h2>
+      </div>
+      <div class="item has-text-centered">
+        <!-- Your image here -->
+        <img src="static/images/6_00.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          <strong>Base Scenario 6:</strong> Unprotected Left-turn.<br/>
+          Some Descriptions.
+        </h2>
+      </div>
+      <div class="item has-text-centered">
+        <!-- Your image here -->
+        <img src="static/images/7_00.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          <strong>Base Scenario 7:</strong> Right-turn.<br/>
+          Some Descriptions.
+       </h2>
+     </div>
+     <div class="item has-text-centered">
+      <!-- Your image here -->
+      <img src="static/images/8_00.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+          <strong>Base Scenario 8:</strong> Crossing Negotiation.<br/>
+          Some Descriptions.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
 <!-- End image carousel -->
 
 
@@ -258,12 +304,12 @@
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
+<!--  <section class="section" id="BibTeX">-->
+<!--    <div class="container is-max-desktop content">-->
+<!--      <h2 class="title">BibTeX</h2>-->
+<!--      <pre><code>BibTex Code Here</code></pre>-->
+<!--    </div>-->
+<!--</section>-->
 <!--End BibTex citation -->
 
 
